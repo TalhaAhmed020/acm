@@ -1,0 +1,31 @@
+.container{
+    width: 100%;
+    display: flex;
+}
+
+.inner1{
+    width: 35%;
+    border-top: 1px solid #cfcfcfe0;
+    padding: 1% 8%;
+}
+
+.desc{
+    font-size: 22px;
+    color: #999;
+}
+
+.inner2{
+    width: 35%;
+    border-top: 1px solid #cfcfcfe0;
+    padding: 1% 8%;
+    margin-left: auto;
+    display: flex;
+    gap: 2500px;
+}
+
+.socialMediaIcons{
+    margin-left: auto;
+    display: flex;
+    gap: 25px;
+    filter: grayscale(1);
+}
