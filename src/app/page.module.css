@@ -1,6 +1,6 @@
 .container{
   width: 100%;
-  padding: 2% 10%;
+  padding: 8% 15% 4% 15%;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -18,18 +18,16 @@
   margin-top: 2%;
 }
 .span{
-  position: absolute;
-  background-color: black;
-  margin-top: -110px;
-  margin-left: -20px;
   width: 100px;
   height: 100px;
+  position: absolute;
+  top: -52px;
+  left: 45%;
 }
 .robot{
-  width: 100px;
-  height: 100px;
-  color: rgb(26, 218, 19);
+
 }
+
 /* .inner{
   width: 70%;
   padding: 3% 5%;
@@ -42,8 +40,8 @@
   border-image: linear-gradient(90deg, rgb(26, 218, 19), rgb(2, 252, 239)) 1;
   background: linear-gradient(90deg, rgba(103,233,105,0.36458333333333337) 0%, rgba(0,0,0,1) 17%, rgba(0,0,0,1) 83%, rgba(24,214,209,0.3393732492997199) 96%);
 } */
-.inner{
-width: 70%;
+.inner{ 
+width: 71%;
 padding: 3% 5%;
 background: radial-gradient(circle at 100% 100%, rgba(0,0,0,0.75) 0, rgba(0,0,0,0.75) 3px, transparent 3px) 0% 0%/5px 5px no-repeat,
             radial-gradient(circle at 0 100%, rgba(0,0,0,0.75) 0, rgba(0,0,0,0.75) 3px, transparent 3px) 100% 0%/5px 5px no-repeat,
@@ -56,6 +54,8 @@ background: radial-gradient(circle at 100% 100%, rgba(0,0,0,0.75) 0, rgba(0,0,0,
 border-radius: 5px;
 box-sizing: border-box;
 position: relative;
+justify-content: center;
+align-items: center;
 z-index: 4;
 border-radius: 10px;
 }
@@ -63,10 +63,10 @@ border-radius: 10px;
   top: 0;
   left: 0;
   /* opacity: 80%; */
-  margin: 2px;
+  margin: 3px;
   border-radius: 6px;
   border: inherit;
-  background: linear-gradient(90deg, rgba(32,173,32,0.5298494397759104) 0%, rgba(0,0,0,1) 92%);
+  background: linear-gradient(90deg, rgba(0, 220, 130, 0.34) 0%, rgba(217, 217, 217, 0) 92%);
   border: inherit;
   position: absolute;
   height:98%;
@@ -81,7 +81,7 @@ border-radius: 10px;
   margin: 2px;
   border-radius: 6px;
   border: inherit;
-  background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(49,240,222,0.5466561624649859) 100%);
+  background: linear-gradient(90deg, rgba(217, 217, 217, 0) 0%, rgba(68, 194, 248, 0.38) 100%);
   position: absolute;
   height:98%;
   width: 18%;
@@ -91,8 +91,8 @@ border-radius: 10px;
 .divContainer{
   display: flex;
   width: 80%;
-  padding: 1% 5%;
-  gap: 10px;
+  padding: 1% 4%;
+  gap: 20px;
 }
 
 .divContainer1{
@@ -100,20 +100,20 @@ border-radius: 10px;
   flex-direction: column;
   width: 90%;
   gap: 20px;
-  padding: 0 1%;
+  padding: 0 0%;
   text-align: justifys;
 }
 .divContainer2{
   width: 60%;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 1px;
   text-align: justify;
-  background: rgba(46,48,47,1);
+  background: rgba(24, 24, 27, 1);
   border-radius: 15px;
   align-items: center;
   justify-content: center;
-  padding: 0% 5%;
+  padding: 0 5%;
 }
 .div1, .div2 { 
   display: flex;
@@ -132,10 +132,10 @@ border-radius: 10px;
 }
 
 .div1{
-  background: linear-gradient(90deg, rgba(46,48,47,1) 0%, rgba(55,53,53,1) 76%, rgba(196,179,39,0.5298494397759104) 100%);
+  background: linear-gradient(90deg, rgba(24, 24, 27, 1) 0%, rgba(24, 24, 27, 1) 76%, rgba(190, 148, 0, 0.38)100%);
 }
 .div2{
-  background: linear-gradient(90deg, rgba(46,48,47,1) 0%, rgba(55,53,53,1) 76%, rgba(29,224,193,0.5298494397759104) 100%);
+  background: linear-gradient(90deg, rgba(24, 24, 27, 1) 0%, rgba(24, 24, 27, 1) 76%, rgba(68, 194, 248, 0.38) 100%);
 }
 .span3{
 }
@@ -162,7 +162,7 @@ border-radius: 10px;
   font-size: 27px;
 }
 .desc{
-  color: #acacac;
+  color: rgba(170, 170, 170, 1);
   font-size: 20px;
   line-height: 30px;
 }

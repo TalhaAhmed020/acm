@@ -27,5 +27,5 @@
     margin-left: auto;
     display: flex;
     gap: 25px;
-    filter: grayscale(1);
+    color: gray;
 }

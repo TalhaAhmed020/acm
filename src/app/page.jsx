@@ -14,7 +14,7 @@ export default function Home() {
         <div className={styles.inner}>
           
           <span className={styles.span}>
-            <Image fill={true} alt='' src='/rocket.svg' className={styles.robot}/>
+            <Image width={100} height={100} alt='' src='/rocket.svg' className={styles.robot}/>
             </span>
           <h1>Cyber Security and anti-hacker Services</h1>
           <div className={styles.bgGradient}></div>

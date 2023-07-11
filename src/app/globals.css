@@ -10,7 +10,11 @@ body {
   overflow-x: hidden;
   background-color: black;
   color: white;
-  font-family: "Red Hat Display", Sans-serif; 
+  font-family: "Inter"; 
+  justify-content: center;
+  align-items: center;
+  font-family: "Inter";
+  font-weight: 700;
 }
 
 :root{
@@ -25,8 +29,6 @@ a{
 .container{
   width: 100%;
   height: 100vh;
-  margin: 0 auto;
-  padding: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
