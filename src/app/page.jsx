@@ -1,22 +1,22 @@
 import Image from 'next/image'
 import styles from './page.module.css'
-import { LuAirVent} from "react-icons/lu";
-import { MdOutlinePhishing } from "react-icons/md";
-import { PiCertificateBold} from "react-icons/pi";
-import { AiOutlineRobot} from "react-icons/ai";
+import { Inter } from '@next/font/google'
 
+const inter = Inter({
+  subsets: ['latin']
+})
 
 
 export default function Home() {
   return (
     <div className={styles.container}>
-        <h1 className={styles.title}>Welcome to ACM</h1>
+        <p className={styles.title}>Welcome to ACM</p>
         <div className={styles.inner}>
           
           <span className={styles.span}>
             <Image width={100} height={100} alt='' src='/rocket.svg' className={styles.robot}/>
             </span>
-          <h1>Cyber Security and anti-hacker Services</h1>
+          <h1 className={styles.heading}>Cyber Security and anti-hacker Services</h1>
           <div className={styles.bgGradient}></div>
           <div className={styles.bgGradient2}></div>
           <p className={styles.paragraph}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi enim nemo velit quidem aspernatur.</p>
@@ -27,10 +27,8 @@ export default function Home() {
           <div className={styles.divContainer1}>
             <div className={styles.div1}>
               <div className={styles.inner1}>
-                <div className={styles.imageContainer}>
-                <div >
-                <span className={styles.span3}><Image width={50} height={50} alt='' src='/search.svg' className={styles.antiHacking}/></span>
-                </div>
+                <div>
+                <Image width={100} height={100} alt='' src='/antihacker.svg' className={styles.antihacking}/>
                 </div>
                 
               </div>

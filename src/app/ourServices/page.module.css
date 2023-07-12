@@ -148,12 +148,41 @@ margin: auto;
         width: 100%;
     }
 
-    .antihacker, .antiphishing{
-        width: 100%;
-        margin: auto;
+    .button{
+        padding: 5px 40px;
+    }
+
+    .title{
+        margin-top: 10%;
+        font-size: 25px;
         margin-bottom: 5%;
     }
-    .button{
+
+    .center{
+        width: 100%;
+    }
+
+    .heading{
+        font-size: 20px;
+    }
+
+    .paragraph2{
         font-size: 15px;
+    }
+
+    .antihacker, .antiphishing,.antihacker2, .antiphishing2,.antihacker3, .antiphishing3{
+        width: 100%;
+        margin: auto;
+        margin-bottom: 10%;
+        padding: 5% 2%;
+    }
+    .paragraph{
+        width: 100%;
+        padding: 0 2%;
+        font-size: 15px;
+    }
+    .button{
+        font-size: 25px;
+        margin-bottom: 25%;
     }
 }

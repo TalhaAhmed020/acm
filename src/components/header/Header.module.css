@@ -36,3 +36,15 @@ position: relative;
     font-weight: 700;
 }
 
+
+@media screen and (max-width:768px) {
+    .header{
+        display: flex;
+        flex-direction: column;
+    }
+    .links{
+        margin-top: 5%;
+        font-size: 15px;
+        margin-bottom: 10%;
+    }
+}

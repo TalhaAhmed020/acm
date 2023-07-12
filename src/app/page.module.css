@@ -9,7 +9,8 @@
   text-align: center;
 }
 .title{
-  font-size: 75px;
+  font-size: 58px;
+  font-weight: 700;
   margin-bottom: 3%;
 }
 .paragraph{
@@ -23,9 +24,6 @@
   position: absolute;
   top: -52px;
   left: 45%;
-}
-.robot{
-
 }
 
 /* .inner{
@@ -41,30 +39,28 @@
   background: linear-gradient(90deg, rgba(103,233,105,0.36458333333333337) 0%, rgba(0,0,0,1) 17%, rgba(0,0,0,1) 83%, rgba(24,214,209,0.3393732492997199) 96%);
 } */
 .inner{ 
-width: 71%;
+width: 72%;
 padding: 3% 5%;
-background: radial-gradient(circle at 100% 100%, rgba(0,0,0,0.75) 0, rgba(0,0,0,0.75) 3px, transparent 3px) 0% 0%/5px 5px no-repeat,
-            radial-gradient(circle at 0 100%, rgba(0,0,0,0.75) 0, rgba(0,0,0,0.75) 3px, transparent 3px) 100% 0%/5px 5px no-repeat,
-            radial-gradient(circle at 100% 0, rgba(0,0,0,0.75) 0, rgba(0,0,0,0.75) 3px, transparent 3px) 0% 100%/5px 5px no-repeat,
-            radial-gradient(circle at 0 0, rgba(0,0,0,0.75) 0, rgba(0,0,0,0.75) 3px, transparent 3px) 100% 100%/5px 5px no-repeat,
-            linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)) 50% 50%/calc(100% - 4px) calc(100% - 10px) no-repeat,
-            linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)) 50% 50%/calc(100% - 10px) calc(100% - 4px) no-repeat,
-            linear-gradient(90deg, transparent 0%, rgba(31,235,36,0.43) 0%, rgba(52,216,204,0.93) 60%, #48abe0 100%),
-            linear-gradient(273deg, rgb(9,255,0) 0%, #0ff08e 100%);
-border-radius: 5px;
+background: radial-gradient(circle at 100% 100%, #000000 0, #000000 17px, transparent 17px) 0% 0%/20px 20px no-repeat,
+            radial-gradient(circle at 0 100%, #000000 0, #000000 17px, transparent 17px) 100% 0%/20px 20px no-repeat,
+            radial-gradient(circle at 100% 0, #000000 0, #000000 17px, transparent 17px) 0% 100%/20px 20px no-repeat,
+            radial-gradient(circle at 0 0, #000000 0, #000000 17px, transparent 17px) 100% 100%/20px 20px no-repeat,
+            linear-gradient(#000000, #000000) 50% 50%/calc(100% - 6px) calc(100% - 40px) no-repeat,
+            linear-gradient(#000000, #000000) 50% 50%/calc(100% - 40px) calc(100% - 6px) no-repeat,
+            linear-gradient(90deg, rgba(0,220,130,1) 0%, rgba(53,227,217,1) 100%);
+border-radius: 20px;
 box-sizing: border-box;
 position: relative;
 justify-content: center;
 align-items: center;
 z-index: 4;
-border-radius: 10px;
 }
 .bgGradient{
   top: 0;
   left: 0;
   /* opacity: 80%; */
   margin: 3px;
-  border-radius: 6px;
+  border-radius: 15px;
   border: inherit;
   background: linear-gradient(90deg, rgba(0, 220, 130, 0.34) 0%, rgba(217, 217, 217, 0) 92%);
   border: inherit;
@@ -73,13 +69,14 @@ border-radius: 10px;
   width: 18%;
 }
 
+
 .bgGradient2{
   top: 0;
   right: 0;
   margin-left: auto;
   /* opacity: 80%; */
   margin: 2px;
-  border-radius: 6px;
+  border-radius: 15px;
   border: inherit;
   background: linear-gradient(90deg, rgba(217, 217, 217, 0) 0%, rgba(68, 194, 248, 0.38) 100%);
   position: absolute;
@@ -127,7 +124,7 @@ border-radius: 10px;
 }
 
 
-.div1:hover, .div2:hover, .divContainer2:hover, .inner:hover{
+.div1:hover, .div2:hover, .divContainer2:hover{
   transform: scale(1.03);
 }
 
@@ -180,4 +177,88 @@ border-radius: 10px;
 }
 .certificate{
   margin-left: 12%;
+}
+
+@media screen and (max-width:768px) {
+  .container{
+    width: 100%;
+    padding: 2% 0;
+  }
+ .divContainer{
+  width: 100%;
+  display: flex;
+  padding: 1% 4%;
+  flex-direction: column;
+ }
+ .divContainer1{
+  width: 100%;
+ }
+ .divContainer2{
+  width: 100%;
+  display: flex;
+  padding: 5% 10%;
+  flex-direction: column;
+  margin-bottom: 10%;
+ }
+ .inner1{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+ }
+ .inner2{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+ }
+ .div1{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+ }
+ .div2{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+ }
+ .antihacking, .antiPhishing, .certificate{
+  width: 70px;
+ }
+ .graph{
+  width: 250px;
+  height: 220px;
+ }
+ .title2{
+  font-size: 22px;
+  line-height: 30px;
+ }
+ .certificate{
+  object-fit: fill;
+  background-size: cover;
+ }
+ .desc{
+  font-size: 18px;
+ }
+ .inner{
+  width: 90%;
+ }
+ .heading{
+  font-size: 22px;
+  margin-top: 5%;
+ }
+ .paragraph{
+  font-size: 18px;
+  color: rgba(170, 170, 170, 1);
+ }
+ .robot{
+  width: 60px;
+ }
+ .title{
+  margin-top: 4%;
+  font-size: 40px;
+  margin-bottom: 5%;
+ }
+ .span{
+  left: 40%;
+ }
 }
