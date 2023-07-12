@@ -6,7 +6,6 @@
   gap: 10px;
   align-items: center;
   justify-content: center;
-  text-align: center;
 }
 .title{
   font-size: 58px;
@@ -52,6 +51,7 @@ border-radius: 20px;
 box-sizing: border-box;
 position: relative;
 justify-content: center;
+text-align: center;
 align-items: center;
 z-index: 4;
 }
@@ -105,7 +105,6 @@ z-index: 4;
   display: flex;
   flex-direction: column;
   gap: 1px;
-  text-align: justify;
   background: rgba(24, 24, 27, 1);
   border-radius: 15px;
   align-items: center;
