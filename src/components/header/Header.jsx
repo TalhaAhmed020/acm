@@ -17,19 +17,22 @@ const links = [
     {
         id: 3,
         title: "Our Services",
-        href: "/"
+        href: "/ourServices"
     }
 ]
 
 const Header = () => {
   return (
     <div className={styles.container}>
-      <Link href="/" className={styles.logo}> <Image src='/logo.png' width={216} height={60} alt='Image Loading Error'/> </Link>
+      <div className={styles.header}>
+      <Link href="/" className={styles.logo}>ACM</Link>
       <div className={styles.links}>
         {links.map(link=>(
             <Link  key={link.id} href={link.href} className={styles.link}>{link.title}</Link>
         ))}
       </div>
+      </div>
+      <div className={styles.line}></div>
     </div>
   )
 }

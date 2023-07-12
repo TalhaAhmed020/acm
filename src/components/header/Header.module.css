@@ -1,9 +1,18 @@
 .container{
-    width: 90%;
-    padding: 2% 5%;
+    width: 100%;
+    padding: 1% 15%;
+    
+}
+.header{
+    width: 100%;
+    padding: 0 2%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+box-sizing: border-box;
+position: relative;
+
+
 }
 
 .links{
@@ -11,9 +20,19 @@
     align-items: center;
     gap: 25px;
     font-size: 20px;
+    border: 1px solid transparent;
 }
 
-.link:hover{
-    color: red;
-    transform: scale(1.2);
+.line{
+    width: 100%;
+    opacity: 50%;
+    border-top: 1px solid transparent;
+  border-image: linear-gradient(to right, rgba(31, 235, 34, 0.664), rgba(52, 216, 205, 0.534)) 2;
 }
+
+
+.logo{
+    font-size: 60px;
+    font-weight: 700;
+}
+
