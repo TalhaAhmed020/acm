@@ -22,7 +22,7 @@ const Login = () => {
   const loginUser = async (e) => {
     console.log(data);
     e.preventDefault();
-    signIn('credentials', {
+    await signIn('credentials', {
       ...data, 
       redirect: false
     });
