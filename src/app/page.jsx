@@ -33,7 +33,7 @@ const Register = () => {
 
     console.log(userInfo);
 
-    router.push('/home');
+    router.push('/login');
   }
 
   const password = () => {

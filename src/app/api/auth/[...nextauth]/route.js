@@ -10,10 +10,6 @@ const prisma = new PrismaClient();
 export const authOptions ={
     adapter: PrismaAdapter(prisma),
     providers: [ 
-        FacebookProvider({
-        clientId: process.env.FACEBOOK_CLIENT_ID,
-        clientSecret: process.env.FACEBOOK_CLIENT_SECRET
-      }),
         CredentialsProvider({
             name: "credentials",
             credentials: {
