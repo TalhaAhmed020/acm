@@ -19,8 +19,8 @@ const Login = () => {
     password: ''
   });
   
-  const handleFacebookLogin = async () => {
-    await signIn('facebook');
+  const handleTwitterLogin = async () => {
+    await signIn('twitter');
   };
 
   const loginUser = async (e) => {
@@ -48,12 +48,12 @@ const Login = () => {
             </div>
             <form action="" className={styles.form} onSubmit={loginUser}>
             <div className={styles.username}>
-            <input type="email" name="email" id="email" value={data.email} onChange={(e) => {setData({...data, email: e.target.value});}} className={styles.username2} placeholder='Username/Email'/>
+            <input type="email" autoComplete="off" name="email" id="email" value={data.email} onChange={(e) => {setData({...data, email: e.target.value});}} className={styles.username2} placeholder='Username/Email'/>
             <Image width={20} height={20} alt='' src='/username.svg'/>
             </div>
 
             <div className={styles.username}>
-            <input type={showPassword?'text':'password'} name="password" id="password" value={data.password} className={styles.username2} onChange={(e) => {setData({...data, password: e.target.value})}} placeholder='Password'/>
+            <input type={showPassword?'text':'password'} autoComplete="off" name="password" id="password" value={data.password} className={styles.username2} onChange={(e) => {setData({...data, password: e.target.value})}} placeholder='Password'/>
             <Image width={20} onClick={()=>setShowPassword(!showPassword)} height={20} alt='' src='/password.svg'/>
             </div>
 
@@ -62,9 +62,9 @@ const Login = () => {
             <p className={styles.paragraph}>OR</p>
             <p className={styles.desc}>Login with</p>
             <div className={styles.social}>
-            <Link href='/' onClick={handleFacebookLogin}> <Image src='/FACEBOOK.png' width={25} height={25} className={styles.facebook} alt='Image Loading Error'/> </Link>
+            <Link href='/' > <Image src='/FACEBOOK.png' width={25} height={25} className={styles.facebook} alt='Image Loading Error'/> </Link>
           <Link href='/https://www.facebook.com/'> <Image src='/LINKEDIN.png' width={25} height={25} className={styles.facebook} alt='Image Loading Error'/> </Link>
-          <Link href='/https://www.facebook.com/'> <Image src='/twitterb.svg' width={25} height={25} className={styles.facebook} alt='Image Loading Error'/> </Link>
+          <Link  onClick={handleTwitterLogin} href='/'> <Image src='/twitterb.svg' width={25} height={25} className={styles.facebook} alt='Image Loading Error'/> </Link>
             </div>
 
         </div>

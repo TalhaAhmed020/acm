@@ -48,27 +48,27 @@ const Register = () => {
             </div>
             <form action="" className={styles.form} onSubmit={registerUser}>
             <div className={styles.username}>
-            <input type="text" name="" value={data.firstName} id="" className={styles.username2} onChange={(e)=> {setData({...data, firstName: e.target.value})}} placeholder='First name'/>
+            <input type="text" name="" value={data.firstName} autoComplete="off" id="" className={styles.username2} onChange={(e)=> {setData({...data, firstName: e.target.value})}} placeholder='First name'/>
             <Image width={20} height={20} alt='' className={styles.password2} src='/password.svg'/>
             </div>
 
             <div className={styles.username}>
-            <input type="text" name="" onChange={(e)=> {setData({...data, lastName: e.target.value})}} id="" value={data.lastName} className={styles.username2} placeholder='Last name'/>
+            <input type="text" name="" autoComplete="off" onChange={(e)=> {setData({...data, lastName: e.target.value})}} id="" value={data.lastName} className={styles.username2} placeholder='Last name'/>
             <Image width={20} height={20} alt='' className={styles.password2} src='/password.svg'/>
             </div>
 
             <div className={styles.username}>
-            <input type="text" name="" id="" onChange={(e)=> {setData({...data, email: e.target.value})}} value={data.email} className={styles.username2} placeholder='Email Address'/>
+            <input type="text" name="" id="" autoComplete="off" onChange={(e)=> {setData({...data, email: e.target.value})}} value={data.email} className={styles.username2} placeholder='Email Address'/>
             <Image width={20} height={20} alt='' src='/username.svg'/>
             </div>
 
             <div className={styles.username}>
-            <input type={showPassword?'text':'password'} name="" id="" onChange={(e)=> {setData({...data, password: e.target.value})}} value={data.password} className={styles.username2} placeholder='Password'/>
+            <input type={showPassword?'text':'password'} autoComplete="off" name="" id="" onChange={(e)=> {setData({...data, password: e.target.value})}} value={data.password} className={styles.username2} placeholder='Password'/>
             <Image width={20}  onClick={password} height={20} alt='' src='/password.svg'/>
             </div>
 
             <div className={styles.username}>
-            <input value={data.confirmPassword} type={showPassword2?'text':'password'} name="" id="" onChange={(e)=> {setData({...data, confirmPassword: e.target.value})}} className={styles.username2} placeholder='Confirm Password'/>
+            <input value={data.confirmPassword} autoComplete="off" type={showPassword2?'text':'password'} name="" id="" onChange={(e)=> {setData({...data, confirmPassword: e.target.value})}} className={styles.username2} placeholder='Confirm Password'/>
             <Image onClick={()=>setShowPassword2(!showPassword2)} width={20} height={20} alt='' src='/password.svg'/>
             </div>
 
