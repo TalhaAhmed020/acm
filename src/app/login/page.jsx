@@ -22,9 +22,9 @@ const Login = () => {
   const loginUser = async (e) => {
     console.log(data);
     e.preventDefault();
-    await signIn('credentials', {
+    signIn('credentials', {
       ...data, 
-      redirect: false
+      redirect: false,
     });
     
     router.push('/home');
@@ -38,12 +38,12 @@ const Login = () => {
             </div>
             <form action="" className={styles.form} onSubmit={loginUser}>
             <div className={styles.username}>
-            <input type="text" name="" id="" value={data.email} onChange={(e) => {setData({...data, email: e.target.value});}} className={styles.username2} placeholder='Username/Email'/>
+            <input type="email" name="email" id="email" value={data.email} onChange={(e) => {setData({...data, email: e.target.value});}} className={styles.username2} placeholder='Username/Email'/>
             <Image width={20} height={20} alt='' src='/username.svg'/>
             </div>
 
             <div className={styles.username}>
-            <input type={showPassword?'text':'password'} name="" id="" value={data.password} className={styles.username2} onChange={(e) => {setData({...data, password: e.target.value})}} placeholder='Password'/>
+            <input type={showPassword?'text':'password'} name="password" id="password" value={data.password} className={styles.username2} onChange={(e) => {setData({...data, password: e.target.value})}} placeholder='Password'/>
             <Image width={20} onClick={()=>setShowPassword(!showPassword)} height={20} alt='' src='/password.svg'/>
             </div>
 
