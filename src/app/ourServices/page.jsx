@@ -1,9 +1,15 @@
+'use client'
+
 import React from 'react'
 import styles from './page.module.css'
 import Image from 'next/image'
+import Header from '@/components/header/Header'
+import Footer from '@/components/footer/Footer'
 
 const OurServices = () => {
   return (
+    <div className={styles.mainContainer1}>
+        <Header/>
     <div className={styles.mainContainer}>
         <div className={styles.container}>
             <h1 className={styles.title}>Cyber security and anti-hacker services</h1>
@@ -69,6 +75,8 @@ const OurServices = () => {
 
         </div>
         
+    </div>
+    <Footer/>
     </div>
   )
 }

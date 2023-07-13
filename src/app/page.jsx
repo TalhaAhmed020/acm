@@ -1,65 +1,91 @@
-import Image from 'next/image'
+'use client'
+import React, { useState } from 'react'
 import styles from './page.module.css'
-import { Inter } from '@next/font/google'
+import Image from 'next/image'
+import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 
-const inter = Inter({
-  subsets: ['latin']
-})
+const Register = () => {
 
+  const [showPassword, setShowPassword] = useState(false);
+  const [showPassword2, setShowPassword2] = useState(false);
+  
+  const router = useRouter();
+  const [data, setData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    password: '',
+    confirmPassword:''
+  })
 
-export default function Home() {
+  const registerUser = async (e) => {
+    e.preventDefault();
+    const response = await fetch ('/api/register', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({data})
+    })
+
+    const userInfo = await response.json();
+
+    console.log(userInfo);
+
+    router.push('/home');
+  }
+
+  const password = () => {
+    setShowPassword(!showPassword)
+  }
+
   return (
     <div className={styles.container}>
-        <p className={styles.title}>Welcome to ACM</p>
-        <div className={styles.inner}>
-          
-          <span className={styles.span}>
-            <Image width={100} height={100} alt='' src='/rocket.svg' className={styles.robot}/>
-            </span>
-          <h1 className={styles.heading}>Cyber Security and anti-hacker Services</h1>
-          <div className={styles.bgGradient}></div>
-          <div className={styles.bgGradient2}></div>
-          <p className={styles.paragraph}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi enim nemo velit quidem aspernatur.</p>
-        </div>
-        <div className={styles.divContainer}>
+        <div className={styles.login}>
+            <div className={styles.heading}>
+                <h2 className={styles.title}>Sign Up</h2>
+            </div>
+            <form action="" className={styles.form} onSubmit={registerUser}>
+            <div className={styles.username}>
+            <input type="text" name="" value={data.firstName} id="" className={styles.username2} onChange={(e)=> {setData({...data, firstName: e.target.value})}} placeholder='First name'/>
+            <Image width={20} height={20} alt='' className={styles.password2} src='/password.svg'/>
+            </div>
 
+            <div className={styles.username}>
+            <input type="text" name="" onChange={(e)=> {setData({...data, lastName: e.target.value})}} id="" value={data.lastName} className={styles.username2} placeholder='Last name'/>
+            <Image width={20} height={20} alt='' className={styles.password2} src='/password.svg'/>
+            </div>
 
-          <div className={styles.divContainer1}>
-            <div className={styles.div1}>
-              <div className={styles.inner1}>
-                <div>
-                <Image width={100} height={100} alt='' src='/antihacker.svg' className={styles.antihacking}/>
-                </div>
-                
-              </div>
-              <div className={styles.inner2}>
-                <h1 className={styles.title2}>Anti-hacker software for your business network</h1>
-                <p className={styles.desc}>Verified Vulnerability Assessments and Penetration Tests on URL/IP addresses and servers</p>
-              </div>
+            <div className={styles.username}>
+            <input type="text" name="" id="" onChange={(e)=> {setData({...data, email: e.target.value})}} value={data.email} className={styles.username2} placeholder='Email Address'/>
+            <Image width={20} height={20} alt='' src='/username.svg'/>
+            </div>
+
+            <div className={styles.username}>
+            <input type={showPassword?'text':'password'} name="" id="" onChange={(e)=> {setData({...data, password: e.target.value})}} value={data.password} className={styles.username2} placeholder='Password'/>
+            <Image width={20}  onClick={password} height={20} alt='' src='/password.svg'/>
+            </div>
+
+            <div className={styles.username}>
+            <input value={data.confirmPassword} type={showPassword2?'text':'password'} name="" id="" onChange={(e)=> {setData({...data, confirmPassword: e.target.value})}} className={styles.username2} placeholder='Confirm Password'/>
+            <Image onClick={()=>setShowPassword2(!showPassword2)} width={20} height={20} alt='' src='/password.svg'/>
             </div>
 
 
-            <div className={styles.div2}>
-            <div className={styles.inner1}>
-                
-              <span className={styles.span2}><Image width={100} height={100} alt='' src='/antiphishing.svg' className={styles.antiPhishing}/> </span>
-              </div>
-              <div className={styles.inner2}>
-                <h1 className={styles.title2}>Anti-Phishing</h1>
-                <p className={styles.desc}>Cyber Security Awareness to prevent advanced email-based threats</p>
-              </div>
+            <button className={styles.button}>Sign Up</button>
+            </form>
+            <p className={styles.paragraph}>OR</p>
+            <p className={styles.desc}>Login with</p>
+            <div className={styles.social}>
+            <Link href='/https://www.linkedin.com'> <Image src='/FACEBOOK.png' width={25} height={25} className={styles.facebook} alt='Image Loading Error'/> </Link>
+          <Link href='/https://www.facebook.com/'> <Image src='/LINKEDIN.png' width={25} height={25} className={styles.facebook} alt='Image Loading Error'/> </Link>
+          <Link href='/https://www.facebook.com/'> <Image src='/twitterb.svg' width={25} height={25} className={styles.twitter} alt='Image Loading Error'/> </Link>
             </div>
 
-
-          </div>
-
-
-          <div className={styles.divContainer2}>
-            <h1 className={styles.title2}>Certified VAPT testing for ISO 27001</h1>
-            <p className={styles.desc}>Documentary evidence required for ISO certification and for Art. 32 of the GDPR</p>
-            <div className={styles.graph}><Image width={160} height={110} alt='' src='/VAPT.svg' className={styles.certificate}/></div> 
-          </div>
         </div>
     </div>
   )
 }
+
+export default Register

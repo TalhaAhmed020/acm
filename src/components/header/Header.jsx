@@ -7,12 +7,12 @@ const links = [
     {
         id: 1,
         title: "Home",
-        href: "/"
+        href: "/home"
     },
     {
         id: 2,
         title: "Anti-Hacker Software",
-        href: "/"
+        href: "/home"
     },
     {
         id: 3,
@@ -25,7 +25,7 @@ const Header = () => {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-      <Link href="/" className={styles.logo}>ACM</Link>
+      <Link href="/home" className={styles.logo}>ACM</Link>
       <div className={styles.links}>
         {links.map(link=>(
             <Link  key={link.id} href={link.href} className={styles.link}>{link.title}</Link>
