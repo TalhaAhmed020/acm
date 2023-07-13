@@ -18,16 +18,26 @@ const Login = () => {
     email: '',
     password: ''
   });
+  
+  const handleFacebookLogin = async () => {
+    await signIn('facebook');
+  };
 
   const loginUser = async (e) => {
     console.log(data);
     e.preventDefault();
-    signIn('credentials', {
+    const result = await signIn('credentials', {
       ...data, 
       redirect: false,
     });
     
-    router.push('/home');
+    if(result.error)
+    {
+      console.error(result.error);
+    }
+    else{
+      router.push('/home');
+    }
   }
 
   return (
@@ -52,7 +62,7 @@ const Login = () => {
             <p className={styles.paragraph}>OR</p>
             <p className={styles.desc}>Login with</p>
             <div className={styles.social}>
-            <Link href='/https://www.linkedin.com/'> <Image src='/FACEBOOK.png' width={25} height={25} className={styles.facebook} alt='Image Loading Error'/> </Link>
+            <Link href='/' onClick={handleFacebookLogin}> <Image src='/FACEBOOK.png' width={25} height={25} className={styles.facebook} alt='Image Loading Error'/> </Link>
           <Link href='/https://www.facebook.com/'> <Image src='/LINKEDIN.png' width={25} height={25} className={styles.facebook} alt='Image Loading Error'/> </Link>
           <Link href='/https://www.facebook.com/'> <Image src='/twitterb.svg' width={25} height={25} className={styles.facebook} alt='Image Loading Error'/> </Link>
             </div>
