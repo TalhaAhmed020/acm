@@ -3,18 +3,14 @@ import CredentialsProvider from "next-auth/providers/credentials";
 import bcrypt from 'bcrypt'
 import { PrismaAdapter } from "@auth/prisma-adapter";
 import { PrismaClient } from "@prisma/client";
-import TwitterProvider from "next-auth/providers/twitter";
-import FacebookProvider from "next-auth/providers/facebook";
+import { toast } from "react-toastify";
+
 
 const prisma = new PrismaClient();
 
 export const authOptions ={
     adapter: PrismaAdapter(prisma),
     providers: [ 
-        TwitterProvider({
-            clientId: process.env.TWITTER_CLIENT_ID,
-            clientSecret: process.env.TWITTER_CLIENT_SECRET
-          }),
         CredentialsProvider({
             name: "credentials",
             credentials: {
@@ -23,6 +19,7 @@ export const authOptions ={
             },
             async authorize(credentials){
                 if(!credentials.email || !credentials.password){
+                    toast.error('Fields must be filled', { autoClose: 2000 });
                     return false;
                 }
 

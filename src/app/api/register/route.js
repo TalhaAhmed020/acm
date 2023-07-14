@@ -26,6 +26,11 @@ export async function POST(request){
 
     const hashedPassword = await bcrypt.hash(password, 10);
 
+    const passwordMatch = await bcrypt.compare(confirmPassword, hashedPassword);
+    if(!passwordMatch){
+        return null;
+    }
+
     const user = await prisma.user.create({
         data:{
             firstName,
